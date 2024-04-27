@@ -28,4 +28,3 @@ echo "Error de conexión: " . $e->getMessage();
 }
 // Cerrar conexión
 $conn = null;
-?>
