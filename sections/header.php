@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="es">
 
@@ -19,10 +20,13 @@
             <li><a class="a_head" href="/api/recipe/1">API_receta</a></li>
         </ul>
         <ul>
-            <li><a class="a_head" href="recipes.php">Login</a></li>
-            <li><a class="a_head" href="recipes.php">Sign up</a></li>
-            <li><a class="a_head" href="recipes.php">Perfil</a></li>
-            <li><a class="a_head" href="recipes.php">Logout</a></li>
+            <?php if (isset($_SESSION['username'])): ?>
+                <li><a class="a_head" href="profile.php">Perfil</a></li>
+                <li><a class="a_head" href="logout.php">Logout</a></li>
+            <?php else: ?>
+                <li><a class="a_head" href="login.php">Login</a></li>
+                <li><a class="a_head" href="signUp.php">Sign up</a></li>
+            <?php endif; ?>
         </ul>
     </nav>
 </header>

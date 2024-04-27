@@ -13,6 +13,7 @@ if (preg_match('/^\/api\//', $request)) {
             <?php include 'activity_3.php'; ?>
         </div>
     </div>
+    
     <div class="activity_2">
         <h2>activity_2</h2>
     </div>
@@ -26,6 +27,6 @@ if (preg_match('/^\/api\//', $request)) {
         </div>
     </div>
 <?php
-include 'sections/footer.php';
+    include 'sections/footer.php';
 }
 ?>
