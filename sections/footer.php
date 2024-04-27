@@ -1,7 +1,8 @@
 </body>
-    <footer>
-        Made with ❤️ by <a href="https://jramma.com">jramma</a>
-    </footer>
+<footer>
+    Made with ❤️ by <a href="https://jramma.com">jramma</a>
+</footer>
+</main>
 </html>
 <style>
     footer {

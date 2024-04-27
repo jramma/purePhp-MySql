@@ -1,5 +1,5 @@
 <?php
-include 'header.php';
+include 'sections/header.php';
 
 include 'utils/connection.php';
 
@@ -48,4 +48,4 @@ try {
 
 $conn = null;
 
-include 'footer.php';
+include 'sections/footer.php';

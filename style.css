@@ -93,3 +93,10 @@ h2 {
 .instrucciones {
   max-width: 25rem;
 }
+.activity_2{
+  padding: 2rem;
+  border: 1px solid #fff;
+}
+.container{
+  padding: 1rem;
+}
