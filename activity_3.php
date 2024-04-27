@@ -1,13 +1,5 @@
 <?php
-require_once __DIR__ . '/vendor/autoload.php';
-// Datos de conexión a la base de datos
-$dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
-$dotenv->load();
-$servername = $_ENV['SERVERNAME'];
-$username = $_ENV['USERNAME'];
-$password = $_ENV['PASSWORD'];
-$dbname = $_ENV['DBNAME'];
-$port = $_ENV['PORT'];
+include 'utils/connection.php';
 
 // Intentar establecer conexión mediante PDO
 try {
@@ -25,9 +17,11 @@ try {
         while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
             // Convertir la fecha de creación al formato DD/MM/YYYY
             $fecha_creacion = date("d/m/Y", strtotime($row["Fecha_creacion"]));
-
+            // Obtener id de la receta
+            $id_receta = $row["Id"];
             // Obtener las primeras 30 palabras de las instrucciones
             $instrucciones = implode(' ', array_slice(explode(' ', $row["Instrucciones"]), 0, 30));
+            echo "<a class='clicky' href='post.php?Id=" . urlencode($id_receta) . "'>";
             echo "<div class='receta'>";
             echo "<div class='receta_flex'>";
             echo "<div>";
@@ -40,8 +34,8 @@ try {
             echo "<img src='" . ($row["Imagen_receta"] ?? "ruta/imagen/por/defecto.jpg") . "' alt='Imagen de la receta'>";
             echo "</div>";
             echo "<p><strong>Instrucciones:</strong> " . $instrucciones . "...</p>";
-
             echo "</div>";
+            echo "</a>";
         }
     } else {
         echo "No se encontraron recetas.";
