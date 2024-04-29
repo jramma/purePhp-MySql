@@ -25,7 +25,7 @@
                 <li><a class="a_head" href="logout.php">Logout</a></li>
             <?php else: ?>
                 <li><a class="a_head" href="login.php">Login</a></li>
-                <li><a class="a_head" href="signUp.php">Sign up</a></li>
+                <li><a class="a_head" href="signup.php">Sign up</a></li>
             <?php endif; ?>
         </ul>
     </nav>

@@ -7,4 +7,5 @@ $username = $_ENV['USERNAME'];
 $password = $_ENV['PASSWORD'];
 $dbname = $_ENV['DBNAME'];
 $port = $_ENV['PORT'];
+$charset = 'utf8mb4';
 ?>
