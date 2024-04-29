@@ -39,7 +39,7 @@ $stmt->execute();
 $user = $stmt->fetch(PDO::FETCH_ASSOC);
 ?>
 
-
+    <div class="items_center">
     <h1>Perfil de usuario</h1>
     <?php if ($user): ?>
         <p>Nombre: <?= htmlspecialchars($user['name']) ?></p>
@@ -57,6 +57,7 @@ $user = $stmt->fetch(PDO::FETCH_ASSOC);
     <?php else: ?>
         <p>No se encontró información del usuario.</p>
     <?php endif; ?>
+    </div>
     <script>
         document.getElementById('editProfileButton').addEventListener('click', function() {
             document.getElementById('editProfileForm').style.display = 'block';

@@ -33,6 +33,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 }
 ?>
 <?php if (!isset($_SESSION['username'])) : ?>
+    <h1 style="text-align: center;">Iniciar sesión</h1>
     <form action="login.php" method="post">
         <label for="username">Username:</label><br>
         <input type="text" id="username" name="username" required><br>
@@ -50,44 +51,3 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 </div>
 
 <?= include 'sections/footer.php'; ?>
-<style>
-    body {
-        font-family: Arial, sans-serif;
-    }
-
-    form {
-        width: 300px;
-        margin: 0 auto;
-    }
-
-    label {
-        display: block;
-        margin-top: 20px;
-    }
-
-    input[type="text"],
-    input[type="password"] {
-        width: 100%;
-        padding: 10px;
-        margin-top: 5px;
-    }
-
-    input[type="submit"] {
-        margin-top: 20px;
-        padding: 10px 20px;
-        background-color: #4CAF50;
-        color: white;
-        border: none;
-        cursor: pointer;
-    }
-
-    input[type="submit"]:hover {
-        background-color: #45a049;
-    }
-
-    div {
-        margin-top: 20px;
-        text-align: center;
-        font-size: 20px;
-    }
-</style>

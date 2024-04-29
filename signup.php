@@ -49,7 +49,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 }
 ?>
 <?php if (!isset($_SESSION['username'])) : ?>
-    <h1>Registro de usuario</h1>
+    <h1 style="text-align: center;">Registro de usuario</h1>
     <form action="signup.php" method="post">
         <label for="username">Nombre de usuario:</label><br>
         <input type="text" id="username" name="username" required><br>
